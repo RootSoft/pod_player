@@ -14,7 +14,7 @@ class _PlayVideoFromVimeoIdState extends State<PlayVideoFromYoutube> {
   @override
   void initState() {
     controller = PodPlayerController(
-      playVideoFrom: PlayVideoFrom.youtube('https://youtu.be/A3ltMaM6noM'),
+      playVideoFrom: PlayVideoFrom.vimeo('https://youtu.be/A3ltMaM6noM'),
       podPlayerConfig: const PodPlayerConfig(
         videoQualityPriority: [720, 360],
         autoPlay: false,
@@ -83,9 +83,9 @@ class _PlayVideoFromVimeoIdState extends State<PlayVideoFromYoutube> {
               try {
                 snackBar('Loading....');
                 FocusScope.of(context).unfocus();
-                await controller.changeVideo(
-                  playVideoFrom: PlayVideoFrom.youtube(videoTextFieldCtr.text),
-                );
+                // await controller.changeVideo(
+                //   playVideoFrom: PlayVideoFrom.youtube(videoTextFieldCtr.text),
+                // );
                 if (!mounted) return;
                 ScaffoldMessenger.of(context).hideCurrentSnackBar();
               } catch (e) {

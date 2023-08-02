@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:visibility_detector/visibility_detector.dart';
-
 import 'package:pod_player/pod_player.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 void main(List<String> args) {
   PodVideoPlayer.enableLogs = true;
@@ -15,33 +14,7 @@ class ListOfVideosApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: ListOfVideosScreen(
-        controllers: [
-          PodPlayerController(
-            playVideoFrom: PlayVideoFrom.youtube(
-                'https://www.youtube.com/watch?v=bk6Xst6euQk'),
-            podPlayerConfig: const PodPlayerConfig(autoPlay: false),
-          ),
-          PodPlayerController(
-            playVideoFrom:
-                PlayVideoFrom.youtube('https://youtu.be/A3ltMaM6noM'),
-            podPlayerConfig: const PodPlayerConfig(autoPlay: false),
-          ),
-          PodPlayerController(
-            playVideoFrom: PlayVideoFrom.youtube(
-                'https://www.youtube.com/watch?v=TjBA6jy4ako'),
-            podPlayerConfig: const PodPlayerConfig(autoPlay: false),
-          ),
-          PodPlayerController(
-            playVideoFrom: PlayVideoFrom.youtube(
-                'https://www.youtube.com/watch?v=HqFgRHTuDyc'),
-            podPlayerConfig: const PodPlayerConfig(autoPlay: false),
-          ),
-          PodPlayerController(
-            playVideoFrom: PlayVideoFrom.youtube(
-                'https://www.youtube.com/watch?v=GpxD-T060RY'),
-            podPlayerConfig: const PodPlayerConfig(autoPlay: false),
-          ),
-        ],
+        controllers: [],
       ),
     );
   }

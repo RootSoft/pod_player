@@ -32,21 +32,8 @@ class _YoutubeVideoViewerState extends State<YoutubeVideoViewer> {
   bool isLoading = true;
   @override
   void initState() {
-    loadVideo();
+    //loadVideo();
     super.initState();
-  }
-
-  void loadVideo() async {
-    final urls = await PodPlayerController.getYoutubeUrls(
-      'https://youtu.be/A3ltMaM6noM',
-    );
-    setState(() => isLoading = false);
-    controller = PodPlayerController(
-      playVideoFrom: PlayVideoFrom.networkQualityUrls(videoUrls: urls!),
-      podPlayerConfig: const PodPlayerConfig(
-        videoQualityPriority: [360],
-      ),
-    )..initialise();
   }
 
   @override

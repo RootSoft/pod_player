@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:pod_player/pod_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:pod_player/pod_player.dart';
 
 class CustomVideoControlls extends StatefulWidget {
   const CustomVideoControlls({Key? key}) : super(key: key);
@@ -300,9 +300,9 @@ class _CustomVideoControllsState extends State<CustomVideoControlls> {
             try {
               snackBar('Loading....');
               FocusScope.of(context).unfocus();
-              await controller.changeVideo(
-                playVideoFrom: PlayVideoFrom.youtube(youtubeTextFieldCtr.text),
-              );
+              // await controller.changeVideo(
+              //   playVideoFrom: PlayVideoFrom.youtube(youtubeTextFieldCtr.text),
+              // );
               controller.addListener(_listner);
               controller.onVideoQualityChanged(
                 () {

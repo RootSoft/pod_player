@@ -249,13 +249,6 @@ class PodPlayerController {
     _ctr.onVimeoVideoQualityChanged = callback;
   }
 
-  static Future<List<VideoQalityUrls>?> getYoutubeUrls(
-    String youtubeIdOrUrl, {
-    bool live = false,
-  }) {
-    return VideoApis.getYoutubeVideoQualityUrls(youtubeIdOrUrl, live);
-  }
-
   static Future<List<VideoQalityUrls>?> getVimeoUrls(
     String videoId, {
     String? hash,

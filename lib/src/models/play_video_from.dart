@@ -111,24 +111,7 @@ class PlayVideoFrom {
       httpHeaders: httpHeaders,
     );
   }
-  factory PlayVideoFrom.youtube(
-    String dataSource, {
-    bool live = false,
-    VideoFormat? formatHint,
-    Future<ClosedCaptionFile>? closedCaptionFile,
-    VideoPlayerOptions? videoPlayerOptions,
-    Map<String, String> httpHeaders = const {},
-  }) {
-    return PlayVideoFrom._(
-      live: live,
-      playerType: PodVideoPlayerType.youtube,
-      dataSource: dataSource,
-      formatHint: formatHint,
-      closedCaptionFile: closedCaptionFile,
-      videoPlayerOptions: videoPlayerOptions,
-      httpHeaders: httpHeaders,
-    );
-  }
+
   factory PlayVideoFrom.networkQualityUrls({
     required List<VideoQalityUrls> videoUrls,
     VideoFormat? formatHint,

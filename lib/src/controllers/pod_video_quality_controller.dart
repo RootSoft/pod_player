@@ -104,14 +104,6 @@ class _PodVideoQualityController extends _PodVideoController {
     return _videoQualityUrl;
   }
 
-  Future<List<VideoQalityUrls>> getVideoQualityUrlsFromYoutube(
-    String youtubeIdOrUrl,
-    bool live,
-  ) async {
-    return await VideoApis.getYoutubeVideoQualityUrls(youtubeIdOrUrl, live) ??
-        [];
-  }
-
   Future<void> changeVideoQuality(int? quality) async {
     if (vimeoOrVideoUrls.isEmpty) {
       throw Exception('videoQuality cannot be empty');
